@@ -46,19 +46,19 @@ function App() {
   ];
 
   // friend array
-  // const friends = [
-  //   "kabir",
-  //   "kais",
-  //   "saif",
-  //   "shakib",
-  //   "rifat",
-  //   "arif",
-  //   "rabi",
-  //   "shahin",
-  //   "akash",
-  //   "shihab",
-  //   "moni",
-  // ];
+  const friends = [
+    "kabir",
+    "kais",
+    "saif",
+    "shakib",
+    "rifat",
+    "arif",
+    "rabi",
+    "shahin",
+    "akash",
+    "shihab",
+    "moni",
+  ];
 
   return (
     <div className="App">
@@ -107,9 +107,9 @@ function App() {
           <Product product={pd}></Product>
         ))}
         {/*  */}
-        {/* {friends.map((fr) => (
-          <Friends friend={fr}></Friends>
-        ))} */}
+        {friends.map((fr) => (
+          <Friends name={fr}></Friends>
+        ))}
 
         {/* component defined by user */}
 
@@ -252,22 +252,22 @@ function Users() {
 // }
 //
 // Friend Component
-// function Friends(props) {
-//   const friendStyle = {
-//     border: "1px solid gray",
-//     borderRadius: "16px",
-//     backgroundColor: "lightgray",
-//     height: "200px",
-//     width: "200px",
-//     float: "left",
-//     margin: "16px",
-//     color: "black",
-//   };
-//   return (
-//     <div style={friendStyle}>
-//       <h4>Name:{props.friends}</h4>
-//     </div>
-//   );
-// }
+function Friends(props) {
+  const friendStyle = {
+    border: "1px solid gray",
+    borderRadius: "16px",
+    backgroundColor: "lightgray",
+    height: "200px",
+    width: "200px",
+    float: "left",
+    margin: "16px",
+    color: "black",
+  };
+  return (
+    <div style={friendStyle}>
+      <h4>Name:{props.name}</h4>
+    </div>
+  );
+}
 
 export default App;
